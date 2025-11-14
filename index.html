@@ -117,24 +117,24 @@
       </div>
     </section>
 
-    <!-- ===== SERVICES SECTION ===== -->
+    
     <section class="services-section" id="myservices">
       <div class="container">
         <h2 class="section-title">My Services</h2>
 
         <div class="services-grid">
 
-          <!-- Service 1 -->
+          
           <div class="service-card">
             <div class="service-icon" style="background:#ff4d4d;">
               <i class="fas fa-shopping-cart"></i>
             </div>
-            <h3>Ecommerce Web Design</h3>
+            <h3>Ecommerce Solutions</h3>
             <p>I build ecommerce websites that help you attract customers, boost sales, and grow your online store
               effectively.</p>
           </div>
 
-          <!-- Service 2 -->
+          
           <div class="service-card">
             <div class="service-icon" style="background:#2e89ff;">
               <i class="fas fa-code"></i>
@@ -144,7 +144,7 @@
               more.</p>
           </div>
 
-          <!-- Service 3 -->
+         
           <div class="service-card">
             <div class="service-icon" style="background:#00c853;">
               <i class="fas fa-globe"></i>
@@ -154,7 +154,7 @@
               optimization.</p>
           </div>
 
-          <!-- Service 4 -->
+        
           <div class="service-card">
             <div class="service-icon" style="background:#9b27ff;">
               <i class="fas fa-mobile-alt"></i>
@@ -164,17 +164,7 @@
             </p>
           </div>
 
-          <!-- Service 5 -->
-          <div class="service-card">
-            <div class="service-icon" style="background:#ffb400;">
-              <i class="fas fa-tools"></i>
-            </div>
-            <h3>Website Maintenance</h3>
-            <p>I keep your website fast, secure, and up-to-date, handling updates, fixes, and monitoring so you don’t
-              have to worry.</p>
-          </div>
-
-          <!-- Service 6 -->
+          
           <div class="service-card">
             <div class="service-icon" style="background:rgb(208, 56, 56);">
               <i class="fa-solid fa-cloud"></i>
@@ -183,6 +173,16 @@
             <p>I provide fast, secure cloud hosting and monitor performance so your website or app stays online without
               downtime.
             </p>
+          </div>
+
+          
+          <div class="service-card">
+            <div class="service-icon" style="background:#ffb400;">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Website Maintenance</h3>
+            <p>I keep your website fast, secure, and up-to-date, handling updates, fixes, and monitoring so you don’t
+              have to worry.</p>
           </div>
 
         </div>
@@ -442,7 +442,7 @@
 
     panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
 
-    // Intersection Observer for fade-up elements
+    
     const fadeEls = document.querySelectorAll('.fade-up');
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -518,23 +518,13 @@
       preloader.classList.add('hide-preloader');
     });
 
-    // Optional fade-out effect
-
-    //     const style = document.createElement('style');
-    //     style.innerHTML = `
-    //   #preloader.hide-preloader {
-    //     opacity: 0;
-    //     visibility: hidden;
-    //     transition: opacity 10s ease, visibility 1s ease;
-    //   }
-    // `;
-    //     document.head.appendChild(style);
+   
 
     window.addEventListener('load', function () {
       setTimeout(() => {
         const preloader = document.getElementById('preloader');
         preloader.classList.add('hide');
-      }, 1000); // 2000ms = 2 seconds
+      }, 1000); 
     });
 
     document.addEventListener("DOMContentLoaded", () => {
