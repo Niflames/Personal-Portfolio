@@ -1767,3 +1767,9 @@ footer {
         display: none !important;
     }
 }
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: flex !important;
+  }
+}
