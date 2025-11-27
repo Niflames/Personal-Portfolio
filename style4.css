@@ -1,4 +1,4 @@
-  :root {
+  /* :root {
       --bg-1: #0f0b18;
       --bg-2: #161026;
       --accent-1: #6d4aff;
@@ -7,6 +7,25 @@
       --radius-lg: 18px;
       --transition: 320ms cubic-bezier(.22, .9, .36, 1);
       --max-w: 1200px;
+  } */
+
+
+  :root {
+      --bg-1: #302d42;
+      --bg-2: #2f2c41;
+
+
+      --accent-1: #2f2c41;
+      --accent-2: #aabaff;
+
+      --muted: #a7b2c4;
+
+      --glass: rgba(255, 255, 255, 0.05);
+      --card: rgba(255, 255, 255, 0.04);
+
+      --max-w: 1200px;
+      --transition: 320ms cubic-bezier(.22, .9, .36, 1);
+      --radius-lg: 18px;
   }
 
   * {

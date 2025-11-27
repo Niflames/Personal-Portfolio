@@ -1,4 +1,4 @@
-  :root {
+  /* :root {
       --bg-1: #0f0b18;
       --bg-2: #161026;
       --accent-1: #6d4aff;
@@ -7,6 +7,25 @@
       --radius-lg: 18px;
       --transition: 320ms cubic-bezier(.22, .9, .36, 1);
       --max-w: 1200px;
+  } */
+
+
+  :root {
+      --bg-1: #302d42;
+      --bg-2: #2f2c41;
+
+
+      --accent-1: #2f2c41;
+      --accent-2: #aabaff;
+
+      --muted: #a7b2c4;
+
+      --glass: rgba(255, 255, 255, 0.05);
+      --card: rgba(255, 255, 255, 0.04);
+
+      --max-w: 1200px;
+      --transition: 320ms cubic-bezier(.22, .9, .36, 1);
+      --radius-lg: 18px;
   }
 
   * {
@@ -232,4 +251,24 @@
       color: var(--muted);
       font-size: 14px;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+
+  #backToTop {
+      position: fixed;
+      bottom: 25px;
+      right: 28px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+      box-shadow: 0 10px 30px rgba(109, 74, 255, 0.25);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1500;
+      transition: transform .25s ease, box-shadow .25s ease;
+      animation: blinkPulses 1.4s infinite ease-in-out;
   }

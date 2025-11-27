@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Oluwanifemi — Web Developer & Cloud Engineer</title>
+  <title>Niflames Nexus</title>
   <link rel="shortcut icon" href="assets/images/N (1).jpg" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -16,6 +16,9 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Work+Sans:wght@400;600&display=swap"
     rel="stylesheet">
 </head>
+
+
+
 
 <body>
 
@@ -37,7 +40,7 @@
         <img class="logo" src="/assets/images/N (1).jpg" alt="logo">
         <div>
           <h4>Niflames Nexus</h4>
-          <div class="role">Web & Cloud Engineer</div>
+          <div class="role">Web,Mobile & Cloud Engineer</div>
         </div>
       </div>
 
@@ -52,26 +55,31 @@
           href="https://docs.google.com/document/d/1xBXzLTbk75vi2AWmd8LFtwzmPr4s_9arSAgZZt-f-zY/edit?tab=t.0#heading=h.nvrhb4algc88">Resume</a>
       </nav>
 
+
       <div class="cta-group">
         <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-panel"
           aria-label="Open menu">
           <span class="bar"></span>
         </button>
       </div>
-    </div>
 
-    <div class="mobile-overlay" aria-hidden="true" id="mobile-overlay">
-      <nav id="mobile-panel" class="mobile-panel" role="menu" aria-label="Mobile menu">
-        <a href="#home" role="menuitem">Home</a>
-        <a href="#myservices" role="menuitem">Services</a>
-        <a href="#about" role="menuitem">About</a>
-        <a href="#skills" role="menuitem">Skills</a>
-        <a href="#projects" role="menuitem">Projects</a>
-        <a href="#contact" role="menuitem">Contact</a>
-        <a href="https://docs.google.com/document/d/1xBXzLTbk75vi2AWmd8LFtwzmPr4s_9arSAgZZt-f-zY/edit?tab=t.0#heading=h.nvrhb4algc88"
-          role="menuitem" class="mobile-resume-btn">Resume</a>
-      </nav>
-    </div>
+      <div class="mobile-overlay" aria-hidden="true" id="mobile-overlay">
+        <nav id="mobile-panel" class="mobile-panel" role="menu" aria-label="Mobile menu">
+          <a href="#home" role="menuitem">Home</a>
+          <a href="#myservices" role="menuitem">Services</a>
+          <a href="#about" role="menuitem">About</a>
+          <a href="#skills" role="menuitem">Skills</a>
+          <a href="#projects" role="menuitem">Projects</a>
+          <a href="#contact" role="menuitem">Contact</a>
+          <a href="https://docs.google.com/document/d/1xBXzLTbk75vi2AWmd8LFtwzmPr4s_9arSAgZZt-f-zY/edit?tab=t.0#heading=h.nvrhb4algc88"
+            role="menuitem" class="mobile-resume-btn">Resume</a>
+        </nav>
+      </div>
+
+
+
+
+
   </header>
 
 
@@ -117,14 +125,14 @@
       </div>
     </section>
 
-    
+
     <section class="services-section" id="myservices">
       <div class="container">
         <h2 class="section-title">My Services</h2>
 
         <div class="services-grid">
 
-          
+
           <div class="service-card">
             <div class="service-icon" style="background:#ff4d4d;">
               <i class="fas fa-shopping-cart"></i>
@@ -134,7 +142,7 @@
               effectively.</p>
           </div>
 
-          
+
           <div class="service-card">
             <div class="service-icon" style="background:#2e89ff;">
               <i class="fas fa-code"></i>
@@ -144,7 +152,7 @@
               more.</p>
           </div>
 
-         
+
           <div class="service-card">
             <div class="service-icon" style="background:#00c853;">
               <i class="fas fa-globe"></i>
@@ -154,7 +162,7 @@
               optimization.</p>
           </div>
 
-        
+
           <div class="service-card">
             <div class="service-icon" style="background:#9b27ff;">
               <i class="fas fa-mobile-alt"></i>
@@ -164,7 +172,7 @@
             </p>
           </div>
 
-          
+
           <div class="service-card">
             <div class="service-icon" style="background:rgb(208, 56, 56);">
               <i class="fa-solid fa-cloud"></i>
@@ -175,7 +183,7 @@
             </p>
           </div>
 
-          
+
           <div class="service-card">
             <div class="service-icon" style="background:#ffb400;">
               <i class="fas fa-tools"></i>
@@ -415,34 +423,36 @@
   </footer>
 
   <script>
+    const hamburger = document.getElementById("hamburger");
+    const overlay = document.getElementById("mobile-overlay");
+    const panel = document.getElementById("mobile-panel");
 
-    const hamburger = document.getElementById('hamburger');
-    const panel = document.getElementById('mobile-panel');
-    const overlay = document.querySelector('.mobile-overlay');
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("is-open");
+      overlay.classList.toggle("show");
+      panel.classList.toggle("show");
+    });
 
-    function toggleMenu(open) {
-      if (open) {
-        panel.classList.add('show');
-        overlay.setAttribute('aria-hidden', 'false');
-        hamburger.setAttribute('aria-expanded', 'true');
-        hamburger.classList.add('is-open');
-      } else {
-        panel.classList.remove('show');
-        overlay.setAttribute('aria-hidden', 'true');
-        hamburger.setAttribute('aria-expanded', 'false');
-        hamburger.classList.remove('is-open');
-      }
-    }
-
-    hamburger.addEventListener('click', () => {
-      const isOpen = panel.classList.contains('show');
-      toggleMenu(!isOpen);
+    panel.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("is-open");
+        overlay.classList.remove("show");
+        panel.classList.remove("show");
+      });
     });
 
 
-    panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        hamburger.classList.remove("is-open");
+        overlay.classList.remove("show");
+        panel.classList.remove("show");
+      }
+    });
 
-    
+
+
+
     const fadeEls = document.querySelectorAll('.fade-up');
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -518,13 +528,13 @@
       preloader.classList.add('hide-preloader');
     });
 
-   
+
 
     window.addEventListener('load', function () {
       setTimeout(() => {
         const preloader = document.getElementById('preloader');
         preloader.classList.add('hide');
-      }, 1000); 
+      }, 1000);
     });
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -563,7 +573,6 @@
 
 
   </script>
-
 </body>
 
 </html>
